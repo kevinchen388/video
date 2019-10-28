@@ -3,8 +3,6 @@
 <head>
 	<!-- Note: This file was originally named audio_begin.html.  So if you notice something
 	different in the example video don't be alarmed.-->
-    <script src="https://kit.fontawesome.com/52e8749e9d.js" crossorigin="anonymous"></script>
-
 	<meta charset="UTF-8">
 	<title>JavaScript Video Controls</title>
 	<style>
@@ -21,15 +19,35 @@
 		button{
 			margin-bottom: 5px;
 		}
+        
+        button.play {
+            background: url(images/play.png);
+            background-color: darkseagreen;
+            background-repeat: no-repeat;  /* make the background image appear only once */
+            background-position: 0px 0px;  /* equivalent to 'top left' */
+            cursor: pointer;        /* make the cursor like hovering over an <a> element */
+            height: 40px;           /* make this the size of your image */
+            padding-left: 40px;     /* make text start to the right of the image */ 
+        }
 
+        button.pause {
+            background: url(images/pause.png);
+            background-color: coral;
+            background-repeat: no-repeat;  /* make the background image appear only once */
+            background-position: 0px 0px;  /* equivalent to 'top left' */
+            cursor: pointer;        /* make the cursor like hovering over an <a> element */
+            height: 40px;           /* make this the size of your image */
+            padding-left: 40px;     /* make text start to the right of the image */ 
+        }
+        
 		/*You can not change anything in the style tag other than to add images for the buttons. */
 </style>
 </head>
 <body> 
 <main>
 	<h1>JavaScript Video Controls</h1>
-	<button onclick="playVid()" type="button" class = "play far fa-play-circle">Play Video</button>
-	<button onclick="pauseVid()" type="button" class = "pause far fa-pause-circle">Pause Video</button><br>
+	<button onclick="playVid()" type="button" class = "play">Play Video</button>
+	<button onclick="pauseVid()" type="button" class = "pause">Pause Video</button><br>
 	<button onclick="slowSpeed()" type="button">Slow Down</button>
 	<button onclick="increaseSpeed()" type="button">Speed Up</button><br>
 	
